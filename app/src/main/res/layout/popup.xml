@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivKori"
+        android:layout_width="265dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kori" />
+
+    <TextView
+        android:id="@+id/tvFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lisää tuote koriin"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivKori"
+        app:layout_constraintStart_toStartOf="@+id/ivKori"
+        app:layout_constraintTop_toBottomOf="@+id/ivKori" />
+
+    <EditText
+        android:id="@+id/EditTextName"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Tuotteen nimi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/tvFood"
+        app:layout_constraintStart_toStartOf="@+id/tvFood"
+        app:layout_constraintTop_toBottomOf="@+id/tvFood" />
+
+    <EditText
+        android:id="@+id/EditTextReminder"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Muistutus"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/EditTextName"
+        app:layout_constraintStart_toStartOf="@+id/EditTextName"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextName" />
+
+    <Button
+        android:id="@+id/btnAddPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Lisää tuote"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextReminder" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="60dp"
+        android:text="Takaisin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextReminder" />
+</androidx.constraintlayout.widget.ConstraintLayout>
